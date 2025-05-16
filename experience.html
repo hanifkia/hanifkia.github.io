@@ -1,0 +1,68 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><div class="section">
+    <h2>Professional Experience</h2>
+    <ul>
+        <li>
+            <strong>Data Scientist</strong>, TreadPlus, Stockholm, Sweden (Remote), Sep 2023 - Present<br>
+            - Developed ensemble forecasting model (Prophet + DeepAR), achieving SMAPE of 0.2 for anomaly detection.<br>
+            - Designed route demand forecasting system using MSTL, SARIMA, and Prophet for logistics optimization.<br>
+            - Built alarms correlation discovery system for telecom using Graph Analysis and FP-Growth.<br>
+            - Automated data quality pipelines, reducing manual workload by 70%.<br>
+            - Implemented time series preprocessing pipeline for mobile network anomaly detection using Hadoop and PySpark.
+        </li>
+        <li>
+            <strong>Data Scientist & ML Researcher</strong>, Clarity Global, Tehran, Iran, May 2020 - Jun 2023<br>
+            - Developed deep network with multitask learning for mobile network fault detection (87% F1-score).<br>
+            - Implemented two-stage fault detection system using XGBoost and Deep Embedding Clustering (68% and 72% F1-score).<br>
+            - Conducted research on 5G, OSS, and AIOps integration, delivering insights to decision-makers.
+        </li>
+        <li>
+            <strong>Researcher & Deep Learning Specialist</strong>, Hooshyar Communication Research Group, Tehran, Iran, Aug 2021 - Feb 2022<br>
+            - Fine-tuned Resnet50-based deep segmentation model for signal protocol classification (93% accuracy).<br>
+            - Designed GUI for real-time signal monitoring with off signals received by USRP and SDR, integrated with ONNX in C++.
+        </li>
+        <li>
+            <strong>Electrical/Control Engineering Intern</strong>, Mechatronics Research Laboratory, Qazvin, Iran, Oct 2013 - Sep 2015<br>
+            - Programmed microcontrollers (AVR) for quad-rotor robots.<br>
+            - Designed PCBs using Protel and Proteus.
+        </li>
+    </ul>
+</div>
