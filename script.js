@@ -650,6 +650,266 @@ function openProjectModal(projectId) {
     };
     
     const experienceData = {
+        'ict': {
+            title: 'Senior Data Scientist & Product Owner - Intelligent Computing Trends',
+            period: 'Present',
+            location: 'Muscat, Oman',
+            image: 'placeholder-ict.jpg',
+            description: `
+                <p>As Senior Data Scientist and Product Owner at Intelligent Computing Trends, I lead the strategic vision and technical execution of Ecolos Plus, a comprehensive last-mile delivery platform. My role uniquely combines hands-on data science with product management, team leadership, and stakeholder engagement to deliver innovative logistics solutions powered by AI and machine learning.</p>
+                
+                <h4>Key Responsibilities:</h4>
+                <br>
+                <h5>Product Leadership & Team Management</h5>
+                <ul>
+                    <li>Leading end-to-end product development for Ecolos Plus platform comprising backend services, frontend dashboard, courier mobile app, and recipient mobile app</li>
+                    <li>Managing cross-functional teams including backend developers, frontend engineers, mobile developers, QA engineers, and marketing specialists</li>
+                    <li>Conducting code reviews for backend implementations to ensure quality, scalability, and adherence to best practices</li>
+                    <li>Overseeing frontend redesign initiatives to enhance user experience and platform usability</li>
+                    <li>Managing project workflows through Jira, implementing agile methodologies and sprint planning</li>
+                    <li>Coordinating with QA team to establish quality standards and testing protocols</li>
+                    <li>Collaborating with marketing team to align product features with market demands and customer needs</li>
+                </ul>
+                <br>
+                <h5>Stakeholder Management & Communication</h5>
+                <ul>
+                    <li>Conducting platform demonstrations for potential clients and partners</li>
+                    <li>Gathering and prioritizing customer feedback to inform product roadmap</li>
+                    <li>Translating business requirements into technical specifications for development team</li>
+                    <li>Presenting technical solutions and data-driven insights to non-technical stakeholders</li>
+                    <li>Managing expectations and timelines across multiple stakeholder groups</li>
+                </ul>
+                
+                <br>
+                <h5>Data Science & AI Development</h5>
+                <ul>
+                    <li>Architecting and implementing AI solutions for logistics optimization</li>
+                    <li>Developing machine learning models for forecasting and route optimization</li>
+                    <li>Building LLM-powered systems for customer support automation</li>
+                    <li>Conducting research on emerging AI technologies applicable to logistics</li>
+                </ul>
+                
+                <br>
+                <h4>Major Projects & Achievements:</h4>
+                <br>
+
+                <h5>1. AI-Powered Customer Support System</h5>
+                <ul>
+                    <li><strong>Challenge:</strong> High volume of customer inquiries overwhelming support team, leading to delayed response times and customer dissatisfaction</li>
+                    <li><strong>Solution:</strong> Developed intelligent chatbot using Large Language Models (LLM) and Retrieval-Augmented Generation (RAG)</li>
+                    <li><strong>Implementation:</strong>
+                        <ul>
+                            <li>Built RAG pipeline integrating logistics documentation and FAQs</li>
+                            <li>Implemented context-aware response generation for customer queries</li>
+                            <li>Created fallback mechanisms for complex queries requiring human intervention</li>
+                            <li>Integrated with existing ticketing system for seamless escalation</li>
+                        </ul>
+                    </li>
+                    <li><strong>Results:</strong> Reduced support ticket volume by 60%, improved response time from hours to seconds, increased customer satisfaction scores by 35%</li>
+                </ul>
+                
+                <br>
+                <h5>2. AI Agent for Parcel Tracking & Automation</h5>
+                <ul>
+                    <li><strong>Objective:</strong> Automate parcel tracking updates and proactive customer communication</li>
+                    <li><strong>Implementation:</strong>
+                        <ul>
+                            <li>Developed AI agent system for real-time parcel status monitoring</li>
+                            <li>Implemented automated notification system for status changes</li>
+                            <li>Created predictive alerts for potential delivery delays</li>
+                            <li>Built natural language interface for tracking queries</li>
+                        </ul>
+                    </li>
+                    <li><strong>Impact:</strong> Automated 80% of tracking inquiries, reduced manual customer support workload, improved delivery visibility</li>
+                </ul>
+                
+                <br>
+                <h5>3. Advanced Route Optimization System</h5>
+                <ul>
+                    <li><strong>Challenge:</strong> Inefficient delivery routes leading to increased fuel costs, longer delivery times, and reduced courier productivity</li>
+                    <li><strong>Approach:</strong> Hybrid solution combining clustering with VROOM algorithm</li>
+                    <li><strong>Technical Implementation:</strong>
+                        <ul>
+                            <li>Applied clustering algorithms (K-means, DBSCAN) to group deliveries by geographic proximity</li>
+                            <li>Integrated VROOM (Vehicle Routing Open-source Optimization Machine) for optimal route sequencing</li>
+                            <li>Incorporated real-time traffic data and delivery time windows</li>
+                            <li>Developed capacity-constrained routing considering vehicle load limits</li>
+                            <li>Implemented multi-depot routing for complex logistics networks</li>
+                        </ul>
+                    </li>
+                    <li><strong>Results:</strong> 
+                        <ul>
+                            <li>30% improvement in route efficiency</li>
+                            <li>Reduced average delivery time per parcel by 25%</li>
+                            <li>Decreased fuel consumption and operational costs</li>
+                            <li>Increased daily delivery capacity per courier by 20%</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <br>
+                <h5>4. Parcel Volume Estimation & Forecasting</h5>
+                <ul>
+                    <li><strong>Business Need:</strong> Accurate prediction of incoming parcel volumes for resource planning and capacity management</li>
+                    <li><strong>Models Developed:</strong>
+                        <ul>
+                            <li>Short-term forecasting (1-7 days) using XGBoost</li>
+                            <li>Medium-term forecasting (1-4 weeks) using CatBoost</li>
+                            <li>Feature engineering: historical volumes, day-of-week, holidays, promotional events, weather data</li>
+                        </ul>
+                    </li>
+                    <li><strong>Application:</strong> Optimized courier scheduling, warehouse staffing, and resource allocation</li>
+                    <li><strong>Accuracy:</strong> Achieved MAPE < 12% for daily forecasts, enabling proactive capacity planning</li>
+                </ul>
+                
+                <br>
+                <h5>5. ETA (Estimated Time of Arrival) Forecasting</h5>
+                <ul>
+                    <li><strong>Objective:</strong> Provide accurate delivery time estimates to recipients</li>
+                    <li><strong>Methodology:</strong>
+                        <ul>
+                            <li>Gradient boosting models (XGBoost and CatBoost) trained on historical delivery data</li>
+                            <li>Features: distance, traffic conditions, courier performance, time-of-day, route complexity, package characteristics</li>
+                            <li>Real-time updates based on courier location and progress</li>
+                            <li>Ensemble approach combining multiple models for robust predictions</li>
+                        </ul>
+                    </li>
+                    <li><strong>Performance:</strong> 85%+ accuracy in ETA predictions within ±15 minutes window</li>
+                    <li><strong>Impact:</strong> Improved customer experience through reliable delivery windows, reduced "where is my package" inquiries by 45%</li>
+                </ul>
+                
+                <br>
+                <h5>6. Demand Forecasting for HUB Management</h5>
+                <ul>
+                    <li><strong>Challenge:</strong> Efficiently manage inventory, space allocation, and operations across multiple distribution hubs</li>
+                    <li><strong>Solution:</strong> Advanced time-series forecasting using Prophet and MSTL decomposition</li>
+                    <li><strong>Implementation Details:</strong>
+                        <ul>
+                            <li><strong>Prophet:</strong> Captured seasonality patterns (daily, weekly, monthly), holiday effects, and long-term trends</li>
+                            <li><strong>MSTL (Multiple Seasonal-Trend decomposition using LOESS):</strong> Handled complex multiple seasonal patterns in delivery data</li>
+                            <li>Forecasted demand at hub level and regional aggregations</li>
+                            <li>Incorporated external factors: e-commerce promotions, seasonal events, economic indicators</li>
+                        </ul>
+                    </li>
+                    <li><strong>Business Value:</strong>
+                        <ul>
+                            <li>25% reduction in operational costs through optimized resource allocation</li>
+                            <li>Improved hub utilization rates</li>
+                            <li>Reduced stockouts and overstocking scenarios</li>
+                            <li>Better capacity planning for peak periods</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <br>
+                <h5>7. Platform Development & Code Quality</h5>
+                <ul>
+                    <li><strong>Backend Code Review:</strong>
+                        <ul>
+                            <li>Established code review protocols and quality standards</li>
+                            <li>Mentored development team on best practices</li>
+                            <li>Ensured scalability and maintainability of backend services</li>
+                            <li>Implemented CI/CD pipelines for automated testing</li>
+                        </ul>
+                    </li>
+                    <li><strong>Frontend Redesign:</strong>
+                        <ul>
+                            <li>Led UX/UI redesign initiative for improved user experience</li>
+                            <li>Conducted user research and usability testing</li>
+                            <li>Implemented responsive design for multi-device support</li>
+                            <li>Improved platform accessibility and performance</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <br>
+                <h4>Technical Skills Applied:</h4>
+                <br>
+
+                <h5>Machine Learning & Data Science</h5>
+                <br>
+                <div class="tech-tags">
+                    <span class="tag">XGBoost</span>
+                    <span class="tag">CatBoost</span>
+                    <span class="tag">Prophet</span>
+                    <span class="tag">MSTL</span>
+                    <span class="tag">Time Series Forecasting</span>
+                    <span class="tag">Clustering (K-means, DBSCAN)</span>
+                    <span class="tag">Feature Engineering</span>
+                    <span class="tag">Ensemble Methods</span>
+                </div>
+                
+                <br>
+                <h5>AI & NLP</h5>
+                <br>
+                <div class="tech-tags">
+                    <span class="tag">Large Language Models (LLM)</span>
+                    <span class="tag">Retrieval-Augmented Generation (RAG)</span>
+                    <span class="tag">Natural Language Processing</span>
+                    <span class="tag">Chatbot Development</span>
+                    <span class="tag">AI Agent Programming</span>
+                </div>
+                
+                <br>
+                <h5>Optimization & Algorithms</h5>
+                <br>
+                <div class="tech-tags">
+                    <span class="tag">VROOM Algorithm</span>
+                    <span class="tag">Vehicle Routing Problem (VRP)</span>
+                    <span class="tag">Route Optimization</span>
+                    <span class="tag">Operations Research</span>
+                </div>
+                
+                <br>
+                <h5>Software Engineering & Tools</h5>
+                <br>
+                <div class="tech-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Backend Development</span>
+                    <span class="tag">Code Review</span>
+                    <span class="tag">CI/CD</span>
+                    <span class="tag">Git</span>
+                </div>
+                
+                <br>
+                <h5>Product Management</h5>
+                <br>
+                <div class="tech-tags">
+                    <span class="tag">Jira</span>
+                    <span class="tag">Agile/Scrum</span>
+                    <span class="tag">Stakeholder Management</span>
+                    <span class="tag">Product Strategy</span>
+                    <span class="tag">Team Leadership</span>
+                    <span class="tag">Cross-functional Collaboration</span>
+                </div>
+                
+                <br>
+                <h4>Leadership & Soft Skills:</h4>
+                <br>
+                <ul>
+                    <li><strong>Team Leadership:</strong> Managing multi-disciplinary team of 10+ members across development, QA, and marketing</li>
+                    <li><strong>Technical Mentorship:</strong> Providing guidance on code quality, architecture decisions, and best practices</li>
+                    <li><strong>Stakeholder Communication:</strong> Translating technical concepts for business audiences and vice versa</li>
+                    <li><strong>Product Vision:</strong> Defining and communicating product roadmap aligned with business objectives</li>
+                    <li><strong>Problem Solving:</strong> Balancing technical constraints, business requirements, and user needs</li>
+                    <li><strong>Agile Facilitation:</strong> Running sprint planning, retrospectives, and daily standups</li>
+                </ul>
+                
+                <br>
+                <h4>Impact Summary:</h4>
+                <br>
+                
+                <ul>
+                    <li>Successfully led platform serving thousands of daily deliveries</li>
+                    <li>Reduced operational costs by 25% through AI-powered forecasting and optimization</li>
+                    <li>Improved customer satisfaction by 35% through intelligent support systems</li>
+                    <li>Increased delivery efficiency by 30% with advanced route optimization</li>
+                    <li>Automated 80% of routine customer inquiries, freeing support team for complex issues</li>
+                    <li>Established data-driven decision-making culture across the organization</li>
+                </ul>
+            `,
+            tags: ['Product Ownership', 'LLM & RAG', 'Route Optimization', 'Team Leadership', 'XGBoost', 'Prophet']
+        },
         'trendplus': {
             title: 'Data Scientist - TrendPlus',
             period: 'Sep 2023 - Present',
