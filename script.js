@@ -67,7 +67,7 @@ function openProjectModal(projectId) {
             title: 'Forecasting Infants\' Sleep and Awake Schedules',
             company: 'TrendPlus Company',
             date: 'September 2024',
-            image: 'placeholder-sleep.jpg',
+            image: 'images/placeholder-sleep.jpg',
             description: `
                 <p>This project focused on developing and deploying a sophisticated multitask LSTM-based model to analyze mobile app-logged sleep data for infants. The goal was to create a system that could accurately forecast sleep patterns and identify anomalies that might indicate sleep disorders or irregularities.</p>
                 
@@ -118,7 +118,7 @@ function openProjectModal(projectId) {
             title: 'Diagnosis of Alzheimer\'s from MRI Images',
             company: 'Amirkabir University of Technology',
             date: 'February 2023',
-            image: 'placeholder-alzheimer.jpg',
+            image: 'images/placeholder-alzheimer.jpg',
             description: `
                 <p>This research project developed an innovative framework for diagnosing Alzheimer's disease and identifying individuals at risk using advanced graph-based analysis of 3D MRI brain images. The approach combined geometric flow methods with graph neural networks to achieve accurate classification of disease stages.</p>
                 
@@ -177,7 +177,7 @@ function openProjectModal(projectId) {
             title: 'Segmentation of Lung Lobes in CT-Scan Images',
             company: 'K.N. Toosi University of Technology',
             date: 'March 2019',
-            image: 'placeholder-lung.jpg',
+            image: 'images/placeholder-lung.jpg',
             description: `
                 <p>This project focused on developing deep learning models for precise segmentation of lung lobes in CT-scan images, specifically for patients with pulmonary fibrosis. Accurate segmentation is crucial for disease assessment, treatment planning, and monitoring disease progression.</p>
                 
@@ -250,7 +250,7 @@ function openProjectModal(projectId) {
             title: 'Identification of Myocardial Infarction Using Multi-Lead ECG Signals',
             company: 'K.N. Toosi University of Technology',
             date: 'May 2019',
-            image: 'placeholder-ecg.jpg',
+            image: 'images/placeholder-heart.jpg',
             description: `
                 <p>This research project developed a deep convolutional neural network for detecting myocardial infarction (heart attacks) from multi-lead ECG signals. The system leverages the rich information present in 12-lead ECG recordings to achieve accurate and rapid detection.</p>
                 
@@ -336,7 +336,7 @@ function openProjectModal(projectId) {
             title: 'Ensemble Forecasting Model for Network Anomaly Detection',
             company: 'TrendPlus',
             date: '2023 - Present',
-            image: 'placeholder-ensemble.jpg',
+            image: 'images/placeholder-ensemble.jpg',
             description: `
                 <p>This production-level project developed a sophisticated ensemble forecasting model for telecommunications network monitoring and anomaly detection. The system integrates multiple state-of-the-art forecasting algorithms to achieve exceptional accuracy in predicting network metrics and identifying anomalies.</p>
                 
@@ -429,7 +429,7 @@ function openProjectModal(projectId) {
             title: 'RAG Pipeline for Transport Systems',
             company: 'TrendPlus',
             date: '2024',
-            image: 'placeholder-rag.jpg',
+            image: 'images/placeholder-rag.jpg',
             description: `
                 <p>This cutting-edge project developed a Retrieval-Augmented Generation (RAG) pipeline for intelligent transport inquiry and incident resolution systems. The solution integrates multiple large language models to provide context-aware, accurate responses for logistics and transport operations.</p>
                 
@@ -654,7 +654,7 @@ function openProjectModal(projectId) {
             title: 'Senior Data Scientist & Product Owner - Intelligent Computing Trends',
             period: 'Present',
             location: 'Muscat, Oman',
-            image: 'placeholder-ict.jpg',
+            image: 'images/ecolosplus.jpg',
             description: `
                 <p>As Senior Data Scientist and Product Owner at Intelligent Computing Trends, I lead the strategic vision and technical execution of Ecolos Plus, a comprehensive last-mile delivery platform. My role uniquely combines hands-on data science with product management, team leadership, and stakeholder engagement to deliver innovative logistics solutions powered by AI and machine learning.</p>
                 
@@ -914,7 +914,7 @@ function openProjectModal(projectId) {
             title: 'Data Scientist - TrendPlus',
             period: 'Sep 2023 - Present',
             location: 'Stockholm, Sweden (Remote)',
-            image: 'placeholder-trendplus.jpg',
+            image: 'images/trendplus.png',
             description: `
                 <p>At TrendPlus, I work on developing advanced data science and machine learning solutions for logistics, telecommunications, and healthcare applications. My role encompasses the full ML lifecycle from research and development to deployment and monitoring of production systems.</p>
                 
@@ -1171,6 +1171,18 @@ function openProjectModal(projectId) {
                 <span class="modal-company">${data.company || data.location}</span>
                 <span class="modal-date">${data.date || data.period}</span>
             </div>
+
+            ${
+            data.image
+                ? `<img
+                    src="${data.image}"
+                    alt="${data.title} project image"
+                    loading="lazy"
+                    style="width:100%; height:auto; max-height:360px; object-fit:cover; border-radius:12px; margin:1.2rem 0 1.5rem;"
+                />`
+                : ``
+            }
+
             ${data.description}
         `;
         modal.style.display = 'block';
